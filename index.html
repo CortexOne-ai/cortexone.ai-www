@@ -5,86 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>CortexOne.ai</title>
   <style>
-    :root {
-      --accent-color: #e6f0ff;
-      --text-dark: #1a1a1a;
-      --text-subtle: #34495e;
-      --highlight: #2c3e50;
-    }
-
     body {
       font-family: 'Segoe UI', sans-serif;
-      margin: 0;
       background-color: #fdfdfd;
-      color: var(--text-dark);
+      margin: 0;
+      padding: 0;
+      color: #222;
     }
-
     header {
-      background-color: var(--accent-color);
-      padding: 2.5rem 1.5rem;
+      background-color: #e6f0ff;
+      padding: 3rem 2rem;
       text-align: center;
     }
-
     header h1 {
-      font-size: 2.8rem;
       margin: 0;
-      color: var(--highlight);
+      font-size: 3rem;
+      color: #2c3e50;
     }
-
     header p {
+      margin-top: 1rem;
       font-size: 1.2rem;
-      color: var(--text-subtle);
-      margin-top: 0.8rem;
-      transition: opacity 0.3s ease;
+      color: #34495e;
     }
-
     nav {
       display: flex;
       justify-content: center;
       gap: 2rem;
-      background-color: #ffffff;
-      border-top: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
       padding: 1rem;
-      font-size: 1rem;
+      background-color: #f7faff;
     }
-
     nav a {
       text-decoration: none;
       color: #2c3e50;
       font-weight: bold;
       cursor: pointer;
     }
-
     main {
-      padding: 2rem 1.5rem;
+      padding: 2rem;
       max-width: 900px;
       margin: 0 auto;
     }
-
     section {
       margin-bottom: 2.5rem;
     }
-
     h2 {
-      color: var(--text-dark);
-      font-size: 1.8rem;
-      margin-bottom: 0.8rem;
+      color: #1a1a1a;
+      margin-bottom: 0.5rem;
     }
-
     p {
       line-height: 1.6;
       color: #333;
     }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
     footer {
       text-align: center;
       font-size: 0.9rem;
@@ -93,16 +64,24 @@
       color: #666;
     }
 
+	ul {
+	  padding-left: 1.5rem;
+	  margin-top: 1rem;
+	  margin-bottom: 2rem;
+	}
+
+	ul li {
+	  margin-bottom: 0.75rem;
+	  line-height: 1.6;
+	}
+
     @media (max-width: 600px) {
       header h1 {
         font-size: 2rem;
       }
-      header p {
-        font-size: 1rem;
-      }
       nav {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: 1rem;
       }
     }
   </style>
@@ -115,42 +94,33 @@
 
   <nav>
     <a onclick="showSection('home')">Home</a>
-    <a onclick="showSection('expertise')">Expertise</a>
+    <a onclick="showSection('expertise')">Our Services</a>
   </nav>
 
   <main>
     <div id="home">
       <section>
         <h2>Who We Are</h2>
-        <p>CortexOne is a scientific AI consultancy dedicated to building intelligent foundations for organizations. We specialize in transforming raw, scattered, or siloed knowledge into usable, queryable, and scalable systems. Our work bridges the gap between applied research and pragmatic engineering.</p>
-        <p>Whether you're a startup exploring AI for the first time, or an enterprise seeking to modernize legacy data systems, we help you navigate the landscape with clarity, precision, and trust. We believe in AI that is aligned, transparent, and built to last.</p>
+        <p>CortexOne.ai is an independent AI research and consulting company. We specialize in helping teams and organizations apply state-of-the-art AI to structured data, domain-specific knowledge, and advanced reasoning tasks.</p>
       </section>
 
       <section>
-        <h2>Our Services</h2>
-        <ul>
-          <li><strong>AI Strategy & Architecture:</strong> We design and evaluate scalable systems tailored to your domain, constraints, and goals.</li>
-          <li><strong>Structured Knowledge Engineering:</strong> Extracting structure from code, documents, tables, APIs, and logs — making them usable for reasoning and search.</li>
-          <li><strong>Custom LLM Training:</strong> Fine-tuning models that speak your language, reflect your logic, and serve your needs precisely.</li>
-          <li><strong>Retrieval-Augmented Interfaces:</strong> Building semantic search and Q&A pipelines powered by embeddings, ASTs, and symbolic indexing.</li>
-          <li><strong>Private & Self-Hosted Deployments:</strong> We respect your data boundaries and support full on-premise setups, with no lock-in.</li>
-        </ul>
+        <h2>Our Mission</h2>
+        <p>We believe AI should serve your domain with clarity and control. Our mission is to design intelligent systems that reason over your knowledge, documents, and data — turning information into action, and complexity into clarity. We ensure that your teams, tools, and users benefit from contextual intelligence without losing transparency, privacy, or ownership.</p>
+        <p>From AI-powered search and retrieval to custom LLM tooling and semantic indexing, we design intelligent systems that help your team move faster, learn deeper, and scale smarter.</p>
       </section>
 
       <section>
         <h2>Let’s Talk</h2>
-        <p>Email us at <strong>hello@cortexone.ai</strong> — and let’s shape the future together, one token at a time.</p>
+        <p>Email us at <strong>hello@cortexone.ai</strong> — and let’s build the future together, one token at a time.</p>
       </section>
     </div>
 
     <div id="expertise" style="display:none;">
       <section>
-        <h2>Expertise</h2>
-        <p><em>We architect intelligent systems that reason over your code, your knowledge, and your data — turning complexity into clarity.</em></p>
-
+        <h2>Our Services</h2>
         <p>CortexOne is a scientific AI consultancy that helps companies extract, organize, and reason over structured and semi-structured knowledge. Our mission is to bring the full potential of domain-specific AI to your fingertips — responsibly, scalably, and precisely.</p>
 
-        <h3>Our Expertise</h3>
         <ul>
           <li><strong>Codebase Reasoning:</strong> Extracting knowledge from source code, APIs, symbols, and internal docs using AST-based parsing and enriched LLM training.</li>
           <li><strong>Structured Knowledge Extraction:</strong> Turning spreadsheets, JSON, logs, or proprietary formats into clean, queryable representations for LLMs.</li>
@@ -171,19 +141,38 @@
 
         <h3>How We Work With You</h3>
         <ul>
-          <li>🎯 Strategy & architecture design</li>
-          <li>🧠 Dataset creation, enrichment, and preparation</li>
-          <li>💡 Prompt engineering, retrieval tuning, and evaluation</li>
-          <li>🛠️ LLM training and infrastructure setup</li>
-          <li>📊 Internal tooling and developer-facing UI integration</li>
-          <li>📚 Documentation, onboarding, and handoff support</li>
+          <li> Strategy & architecture design</li>
+          <li> Dataset creation, enrichment, and preparation</li>
+          <li> Prompt engineering, retrieval tuning, and evaluation</li>
+          <li> LLM training and infrastructure setup</li>
+          <li> Internal tooling and developer-facing UI integration</li>
+          <li> Documentation, onboarding, and handoff support</li>
         </ul>
+
+
+	<h3>How We Work With You</h3>
+	<ul>
+	  <li>Strategy and architecture design tailored to your domain and goals</li>
+	  <li>Dataset creation, enrichment, and normalization for model readiness</li>
+	  <li>Prompt engineering, retrieval tuning, and performance evaluation</li>
+	  <li>Training pipelines for fine-tuned LLMs and custom embeddings</li>
+	  <li>Development of internal tooling and developer-facing integration layers</li>
+	  <li>Support for documentation, onboarding, and maintainable handoff</li>
+	</ul>
+
+<p>
+  Our engagements are built around transparency, rigor, and long-term maintainability. Whether you're investigating foundational AI use cases or extending mature pipelines, we provide the architectural clarity and technical precision to move forward with confidence.
+</p>
+
+<p>
+  With CortexOne, your data becomes structured, your systems become explainable, and your internal knowledge becomes actionable — always with ownership, privacy, and reproducibility in mind.
+</p>
       </section>
     </div>
   </main>
 
   <footer>
-    &copy; 2025 CortexOne.ai Ltd — AI done right.
+    &copy; 2025 CORTEXONE.AI LTD — Company No. 16626638 — All rights reserved.
   </footer>
 
   <script>
@@ -191,10 +180,10 @@
       document.getElementById('home').style.display = section === 'home' ? 'block' : 'none';
       document.getElementById('expertise').style.display = section === 'expertise' ? 'block' : 'none';
 
-      document.getElementById('tagline').textContent = 
-        section === 'expertise'
-          ? "We architect intelligent systems that reason over your code, your knowledge, and your data — turning complexity into clarity."
-          : "Precision AI Consulting for Code, Knowledge & Innovation";
+      const tagline = document.getElementById('tagline');
+      tagline.textContent = section === 'home'
+        ? "Precision AI Consulting for Code, Knowledge & Innovation"
+        : "We architect intelligent systems that reason over your code, your knowledge, and your data — turning complexity into clarity.";
     }
   </script>
 </body>
